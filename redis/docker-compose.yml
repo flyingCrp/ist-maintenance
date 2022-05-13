@@ -1,6 +1,6 @@
 version: '3.9'
 services:
-  app:
+  redis:
     image: 'bitnami/redis:latest'
     restart: "unless-stopped"
     hostname: "redis"
@@ -10,8 +10,8 @@ services:
     volumes:
       - /root/workspace/volume_datas/redis/data:/bitnami/redis/data
     environment:
-      - REDIS_PASSWORD=980624
-      - REDIS_PORT_NUMBER=7000
+      - REDIS_PASSWORD=YOUR-PASSWORD
+      - REDIS_PORT_NUMBER=YOUR-PORT
 networks:
   app:
     external: true
