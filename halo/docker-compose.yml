@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  halo:
+    image: 'halohub/halo:1.5.3'
+    restart: "unless-stopped"
+    hostname: "halo"
+    container_name: "halo"
+    networks:
+      - app
+    volumes:
+      - /root/workspace/volume_datas/halo_datas:/root/.halo
+    ports:
+      - "8090:8090"
+networks:
+  app:
+    external: true
