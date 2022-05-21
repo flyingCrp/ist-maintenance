@@ -1,0 +1,19 @@
+version: '3.9'
+services:
+  mysql:
+    image: "mysql:8.0"
+    command:
+      - --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      "MYSQL_ROOT_PASSWORD": "980624"
+    volumes:
+      - /root/workspace/volume_datas/mysql/data:/var/lib/mysql
+      - /roow/workspace/volume_datas/mysql/config:/etc/mysql/conf.d
+    ports:
+      - "3306:3306"
+    networks:
+      - app
+networks:
+  app:
+    external: true
