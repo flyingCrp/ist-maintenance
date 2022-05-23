@@ -8,7 +8,7 @@ services:
     hostname: "mysql"
     container_name: "mysql"
     environment:
-      "MYSQL_ROOT_PASSWORD": "980624"
+      "MYSQL_ROOT_PASSWORD": "YOUR PASSWORD"
     volumes:
       - /root/workspace/volume_datas/mysql/data:/var/lib/mysql
       - /roow/workspace/volume_datas/mysql/config:/etc/mysql/conf.d
